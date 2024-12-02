@@ -35,6 +35,13 @@
     console.log(users[0])
     console.log(users[0].age, users[1].age)
 
+    const userArea:HTMLDivElement = document.getElementById('users') as HTMLDivElement
+    const el1 = `<li>${user1.name} ${user1.age} ${user1.loggedIn}</li>`
+    const el2 = `<li>${user2.name} ${user2.age} ${user2.loggedIn}</li>`
+    const ul = `<ul>${el1} ${el2}</ul>`
+
+    userArea.innerHTML = ul
+    
     type Transaction = {
         description: string,
         amount: number,

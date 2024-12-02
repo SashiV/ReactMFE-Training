@@ -35,6 +35,11 @@ var __assign = (this && this.__assign) || function () {
     ];
     console.log(users[0]);
     console.log(users[0].age, users[1].age);
+    var userArea = document.getElementById('users');
+    var el1 = "<li>".concat(user1.name, " ").concat(user1.age, " ").concat(user1.loggedIn, "</li>");
+    var el2 = "<li>".concat(user2.name, " ").concat(user2.age, " ").concat(user2.loggedIn, "</li>");
+    var ul = "<ul>".concat(el1, " ").concat(el2, "</ul>");
+    userArea.innerHTML = ul;
     var trans1 = {
         description: 'Deposit',
         amount: 2000,
