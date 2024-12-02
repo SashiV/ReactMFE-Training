@@ -40,21 +40,13 @@
     console.log(users[0])
     console.log(users[0].age, users[1].age)
 
-    const userArea:HTMLDivElement = document.getElementById('users') as HTMLDivElement
-    //const el1 = `<li>${user1.name} ${user1.age} ${user1.loggedIn}</li>`
-    //const el2 = `<li>${user2.name} ${user2.age} ${user2.loggedIn}</li>`
-    //let ul = `<ul>${el1} ${el2}</ul>`
-
-    let el = "<ol>"
-    users.forEach(user => {
-        if (user.loggedIn) {
-            console.log('Logged In: True')
-            el += `<li>${user.name} ${user.age} ${user.loggedIn}</li>`
-        }
-    });
-
-    el += "<ol>"
-    userArea.innerHTML = el
+    function logIn(user: Signature): void {
+        user.loggedIn = true
+        const userArea:HTMLParagraphElement = document.getElementById('welcomeUser') as HTMLParagraphElement
+        const welcomeMessage = 'Welcome'
+        userArea.innerHTML = `${welcomeMessage} ${user.name}`
+        console.log(user.name, 'Logged In')
+    }
 
     type Transaction = {
         description: string,

@@ -40,19 +40,13 @@ var __assign = (this && this.__assign) || function () {
     ];
     console.log(users[0]);
     console.log(users[0].age, users[1].age);
-    var userArea = document.getElementById('users');
-    //const el1 = `<li>${user1.name} ${user1.age} ${user1.loggedIn}</li>`
-    //const el2 = `<li>${user2.name} ${user2.age} ${user2.loggedIn}</li>`
-    //let ul = `<ul>${el1} ${el2}</ul>`
-    var el_1 = "<ol>";
-    users.forEach(function (user) {
-        if (user.loggedIn) {
-            console.log('Logged In: True');
-            el_1 += "<li>".concat(user.name, " ").concat(user.age, " ").concat(user.loggedIn, "</li>");
-        }
-    });
-    el_1 += "<ol>";
-    userArea.innerHTML = el_1;
+    function logIn(user) {
+        user.loggedIn = true;
+        var userArea = document.getElementById('welcomeUser');
+        var welcomeMessage = 'Welcome';
+        userArea.innerHTML = "".concat(welcomeMessage, " ").concat(user.name);
+        console.log(user.name, 'Logged In');
+    }
     var trans1 = {
         description: 'Deposit',
         amount: 2000,
