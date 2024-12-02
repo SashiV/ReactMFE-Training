@@ -44,7 +44,6 @@
     //const el1 = `<li>${user1.name} ${user1.age} ${user1.loggedIn}</li>`
     //const el2 = `<li>${user2.name} ${user2.age} ${user2.loggedIn}</li>`
     //let ul = `<ul>${el1} ${el2}</ul>`
-    //userArea.innerHTML = ul
 
     let el = "<ol>"
     users.forEach(user => {
