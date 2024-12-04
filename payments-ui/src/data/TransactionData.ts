@@ -10,7 +10,7 @@ export type Transaction = {
     type: string;
   };
 
-  const data: Transaction[] = [
+  export const data: Transaction[] = [
     {
       id: 139235,
       amount: 60,
